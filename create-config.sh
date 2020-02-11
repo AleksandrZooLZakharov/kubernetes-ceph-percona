@@ -4,15 +4,24 @@
 # all masters settings below must be same
 #######################################
 
+#etcd_version v3.3.18
+#etcdToken gcp_etcd_token
+
+#master01        35.228.254.190  10.166.15.221
+#master02        35.228.102.146  10.166.15.217
+#master03        35.228.244.91   10.166.15.216
+#worknode01      35.228.61.254   10.166.15.219
+#worknode02      35.228.149.225  10.166.15.218
+#worknode03      35.228.52.116   10.166.15.220
 
 # master01 ip address
-export K8SHA_IP1=10.73.71.25
+export K8SHA_IP1=10.166.15.221
 
 # master02 ip address
-export K8SHA_IP2=10.73.71.26
+export K8SHA_IP2=10.166.15.217
 
 # master03 ip address
-export K8SHA_IP3=10.73.71.27
+export K8SHA_IP3=10.166.15.216
 
 
 # master01 hostname
@@ -25,10 +34,10 @@ export K8SHA_HOSTNAME2=master02
 export K8SHA_HOSTNAME3=master03
 
 #etcd tocken:
-export ETCD_TOKEN=9489bf67bdfe1b3ae077d6fd9e7efefd
+export ETCD_TOKEN=gcp_etcd_token
 
 #etcd version
-export ETCD_VERSION="v3.3.10"
+export ETCD_VERSION="v3.3.18"
 
 
 ##############################
