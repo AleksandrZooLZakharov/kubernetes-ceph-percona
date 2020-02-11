@@ -1,0 +1,6 @@
+#copy generated in step 5 certificates to operate rest kube-masters
+#In case GCP do it outside from cluster in 3 steps:
+
+gcloud compute scp --recurse root@master01:/etc/kubernetes/pki .
+gcloud compute scp --recurse ./pki root@master02:/etc/kubernetes
+gcloud compute scp --recurse ./pki root@master03:/etc/kubernetes

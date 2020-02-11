@@ -1,0 +1,2 @@
+# On any of masters:
+#kubectl taint nodes --all node-role.kubernetes.io/master-

@@ -1,0 +1,21 @@
+sudo -i
+
+
+# Run on any master:
+#kubeadm token create --print-join-command --ttl=0
+# received command must been executed on every worker node: just copy in master and paste in worknodes
+
+
+add-apt-repository ppa:vbernat/haproxy-2.0
+# Need to press Enter -> todo cut this
+
+apt-get update && apt-get install -y haproxy=2.0.\*
+./create-config.sh haproxy
+netstat -alpn | grep 6443
+
+
+vim  /etc/kubernetes/kubelet.conf
+# Need handwork - todo cut this
+# server: https://127.0.0.1:6443
+
+systemctl daemon-reload && systemctl restart kubelet && systemctl restart docker

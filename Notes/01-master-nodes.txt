@@ -1,1 +1,0 @@
-sudo -i && git clone https://github.com/AleksandrZooLZakharov/kubernetes-ceph-percona.git

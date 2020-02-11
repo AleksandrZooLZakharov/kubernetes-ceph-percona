@@ -1,1 +1,6 @@
+# Руководство составлено на базе статьи https://habr.com/en/post/462473/
+
+
 apt-get update && apt-get install -y curl apt-transport-https git
+sudo -i 
+git clone https://github.com/AleksandrZooLZakharov/kubernetes-ceph-percona.git && cd kubernetes-ceph-percona
