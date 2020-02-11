@@ -4,7 +4,7 @@
 # all masters settings below must be same
 #######################################
 
-#etcd_version v3.3.18
+#etcd_version v3.3.17
 #etcdToken gcp_etcd_token
 
 #master01        35.228.254.190  10.166.15.221
@@ -37,7 +37,7 @@ export K8SHA_HOSTNAME3=master03
 export ETCD_TOKEN=gcp_etcd_token
 
 #etcd version
-export ETCD_VERSION="3.3.18"
+export ETCD_VERSION="3.3.17"
 
 
 ##############################
