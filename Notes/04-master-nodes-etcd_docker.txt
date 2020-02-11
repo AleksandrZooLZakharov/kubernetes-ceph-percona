@@ -1,0 +1,9 @@
+#в первом шаге скачивался нужный гит репо
+
+#etcd_version v3.3.17
+#etcdToken gcp_etcd_token
+#ETCD
+sudo -i
+cd kubernetes-ceph-percona && apt-get install -y docker-compose
+./create-config.sh docker
+docker-compose --file etcd-docker/docker-compose.yaml up -d
