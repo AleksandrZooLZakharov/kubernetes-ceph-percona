@@ -1,0 +1,17 @@
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/mandatory.yaml
+./create-config.sh ingress
+
+kubectl apply -f ingress/service-nodeport.yaml
+
+# Test:
+#kubectl get svc -n ingress-nginx
+#kubectl describe svc -n ingress-nginx ingress-nginx
+
+# WebUI beta
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta8/aio/deploy/recommended.yaml
+
+# ChangePort and make WebUI accesible from any computer by access to masternode
+kubectl apply -f dashboard/service-nodeport.yaml
+
+kubectl apply -f dashboard/rbac.yaml
+kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')
