@@ -37,7 +37,7 @@ export K8SHA_HOSTNAME3=master03
 export ETCD_TOKEN=gcp_etcd_token
 
 #etcd version
-export ETCD_VERSION="v3.3.18"
+export ETCD_VERSION="3.3.18"
 
 
 ##############################
@@ -74,6 +74,8 @@ fi
   sed \
   -e "s/IPLOCAL/$(hostname -i)/g" \
   -e "s/HOSTNAME/$etcd_host/g" \
+  -e "s/ETCD_VERSION/$ETCD_VERSION/g" \
+  -e "s/ETCD_TOKEN/$ETCD_TOKEN/g" \
   -e "s/K8SHA_IP1/$K8SHA_IP1/g" \
   -e "s/K8SHA_IP2/$K8SHA_IP2/g" \
   -e "s/K8SHA_IP3/$K8SHA_IP3/g" \
